@@ -1,6 +1,9 @@
 //Styles for the navbar
 .navbar {
     background: grey;
+
+    grid-row: navbar-s/navbar-e;
+    grid-column: navbar-s/navbar-e;
 }
 
 .navbar div {
