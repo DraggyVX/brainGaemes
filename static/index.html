@@ -19,6 +19,7 @@
       <p id="random">...</p>
       <p id="yourXP">...</p>
       <p id="yourGOLD">...</p>
+      <div id="yourcounter"> </div>
   </div>
   
   <div class="equipment">
@@ -34,8 +35,10 @@
 
   <script>
 
+      var counter = 0;
       var currentxp = 0;
       var currentgold = 0;
+      var level = 0;
   
     function randomPicker() {
       /*
@@ -46,33 +49,34 @@
       legendary --red
       exotic -----gold
       */
-
-      //Gets what is in the id tags and replaces them with the new phrases
+      counter++;
+      // Gets what is in the id tags and replaces them with the new phrases
       var x = document.getElementById("random")
       var yourxp = document.getElementById("yourXP")
       var yourgold = document.getElementById("yourGOLD")
+      var level = document.getElementById("yourlevel");
       var helmet = document.getElementById("yourhelmet")
       var chestplate = document.getElementById("yourchestplate")
       var leggings = document.getElementById("yourleggings")
       var boots = document.getElementById("yourboots")
       var weapon = document.getElementById("yourweapon")
       
-      //Gets random variables
+      // Gets random variables
       x.innerHTML = Math.floor((Math.random() * 150) + 1); //The floor() method rounds down
       var rngNum = Math.floor((Math.random() * 10) + 1);
       var rngNum2 = Math.floor((Math.random() * 15) + 10);
       var rngNum3 = Math.floor((Math.random() * 5) + 1);
       var rngNum4 = Math.floor((Math.random() * 4) + 1);
       
-      //The chances of what you will get determinded from the random variables
+      // The chances of what you will get determinded from the random variables
       if (x.innerHTML > 140) { //Getting gear
         var rngNum = Math.floor((Math.random() * 99) + 1);
 
-        if (rngNum > 80) //Helmet
+        // Helmet chances
+        if (rngNum > 80) 
         {
             var rngNum = Math.floor((Math.random() * 99) + 1);
             
-            //Chances80
             if (rngNum > 99) {
                 var rngNum = Math.floor((Math.random() * 99) + 1);
 
@@ -92,28 +96,53 @@
                     helmet.innerHTML = "Epic Golden Crown.";
                 }
             }
-          
+
+            else if (rngNum > 80 && rngNum < 100) {
+                x.innerHTML = "Congratulations!!! You got a Exotic Elder Dragon Helmet!!!";
+                helmet.innerHTML = "Exotic Elder Dragon Helmet.";
+            }
+
+            else if (rngNum > 60 && rngNum < 81) {
+                x.innerHTML = "Congratulations!!! You got a Exotic Elder Dragon Helmet!!!";
+                helmet.innerHTML = "Exotic Elder Dragon Helmet.";
+            }
+            
+            else if (rngNum > 40 && rngNum < 61) {
+                x.innerHTML = "Congratulations!!! You got a Exotic Elder Dragon Helmet!!!";
+                helmet.innerHTML = "Exotic Elder Dragon Helmet.";
+            }
+
+            else if (rngNum > 20 && rngNum < 41) {
+                x.innerHTML = "Congratulations!!! You got a Exotic Elder Dragon Helmet!!!";
+                helmet.innerHTML = "Exotic Elder Dragon Helmet.";
+            }
+
+            else {
+                x.innerHTML = "Congratulations!!! You got a Exotic Elder Dragon Helmet!!!";
+                helmet.innerHTML = "Exotic Elder Dragon Helmet.";
+            }
+
         }
 
-        //Chestplate
-        else if (rngNum > 60 && rngNum < 81){
+        // Chestplate
+        else if (rngNum > 60 && rngNum < 81) {
         x.innerHTML = "You got a RARE orc chestplate!";
         chestplate.innerHTML = "Rare orc chestplate.";
         }
 
-        //Leggings
-        else if (rngNum > 40 && rngNum < 61){
+        // Leggings
+        else if (rngNum > 40 && rngNum < 61) {
         x.innerHTML = "You got a RARE orc leggings!";
         leggings.innerHTML = "Rare orc leggings.";
         }
 
-        //Boots
-        else if (rngNum > 20 && rngNum < 41){
+        // Boots
+        else if (rngNum > 20 && rngNum < 41) {
         x.innerHTML = "You got a RARE orc boots!";
         boots.innerHTML = "Rare orc boots.";
         }
 
-        //Weapon
+        // Weapon
         else {
         x.innerHTML = "You got a RARE orc weapon!";
         weapon.innerHTML = "Rare orc weapon.";
@@ -121,11 +150,11 @@
         
       }
 
-      else if (x.innerHTML > 80 && x.innerHTML < 141){
+      else if (x.innerHTML > 80 && x.innerHTML < 141) {
           x.innerHTML = "Nothing happend.";  
       }
   
-      else if (x.innerHTML > 40 && x.innerHTML < 80){
+      else if (x.innerHTML > 40 && x.innerHTML < 80) {
           x.innerHTML = "You gained " + rngNum + " xp.";
           currentxp += rngNum;
       }
@@ -138,6 +167,48 @@
       else {
           x.innerHTML = "You gain " + rngNum3 + " gold!";
           currentgold += rngNum3;
+      }
+
+      if (counter > 999 && counter < 1005) {
+          yourcounter.innerHTML = "Congrats you hit 1000 clicks!";
+      }
+
+      else {
+          yourcounter.innerHTML = "";
+      }
+
+      if (currentxp > 160 && currentxp < 361) {
+          level.innerHTML = "1";
+      }
+      else if (currentxp > 360 && currentxp < 1001) {
+          level.innerHTML = "2";
+      }
+      else if (currentxp > 1000 && currentxp < 2001) {
+          level.innerHTML = "3";
+      }
+      else if (currentxp > 2000 && currentxp < 5001) {
+          level.innerHTML = "4";
+      }
+      else if (currentxp > 5000 && currentxp < 10001) {
+          level.innerHTML = "5";
+      }
+      else if (currentxp > 10000 && currentxp < 15001) {
+          level.innerHTML = "6";
+      }
+      else if (currentxp > 15000 && currentxp < 25001) {
+          level.innerHTML = "7";
+      }
+      else if (currentxp > 25000 && currentxp < 50001) {
+          level.innerHTML = "8";
+      }
+      else if (currentxp > 50000 && currentxp < 100001) {
+          level.innerHTML = "9";
+      }
+      else if (currentxp > 100000 && currentxp < 500000) {
+        level.innerHTML = "10";
+      }
+      else {
+        level.innerHTML = "0";
       }
   
       yourxp.innerHTML = "You have: " + currentxp + " xp.";

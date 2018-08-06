@@ -8,7 +8,7 @@ class Navbar extends Component {
                             <i className="fa fa-bars"></i>
                     </a>
                     <div>lvl: </div>
-                    <div id="yourLVL"> 0</div>
+                    <div id="yourlevel"> 0</div>
                     <a href="#" className="brand">Username</a>
 
                     <div className="left">
