@@ -38,13 +38,24 @@
       var currentgold = 0;
   
     function randomPicker() {
-      
+      /*
+      common -----light grey
+      uncommon ---green
+      rare -------blue
+      epic -------purple
+      legendary --red
+      exotic -----gold
+      */
+
       //Gets what is in the id tags and replaces them with the new phrases
       var x = document.getElementById("random")
       var yourxp = document.getElementById("yourXP")
       var yourgold = document.getElementById("yourGOLD")
       var helmet = document.getElementById("yourhelmet")
       var chestplate = document.getElementById("yourchestplate")
+      var leggings = document.getElementById("yourleggings")
+      var boots = document.getElementById("yourboots")
+      var weapon = document.getElementById("yourweapon")
       
       //Gets random variables
       x.innerHTML = Math.floor((Math.random() * 150) + 1); //The floor() method rounds down
@@ -54,17 +65,63 @@
       var rngNum4 = Math.floor((Math.random() * 4) + 1);
       
       //The chances of what you will get determinded from the random variables
-      if (x.innerHTML > 144) {
-        x.innerHTML = "You got a RARE orc helmet!";
+      if (x.innerHTML > 140) { //Getting gear
+        var rngNum = Math.floor((Math.random() * 99) + 1);
+
+        if (rngNum > 80) //Helmet
+        {
+            var rngNum = Math.floor((Math.random() * 99) + 1);
+            
+            //Chances80
+            if (rngNum > 99) {
+                var rngNum = Math.floor((Math.random() * 99) + 1);
+
+                if (rngNum > 99) {
+                    x.innerHTML = "Congratulations!!! You got a Exotic Elder Dragon Helmet!!!";
+                    helmet.innerHTML = "Exotic Elder Dragon Helmet.";
+                }
+
+                else if (rngNum > 80 && rngNum < 99) {
+                    x.innerHTML = "Congrats! You got a Legendary Hero Helmet!";
+                    helmet.innerHTML = "Legendary Hero Helmet.";
+                }
+
+                else
+                {
+                x.innerHTML = "You got a Legendary Dragon Helmet!!";
+                helmet.innerHTML = "Legendary Dragon Helmet.";
+                }
+            }
+          
+        }
+
+        //Chestplate
+        else if (rngNum > 60 && rngNum < 81){
+        x.innerHTML = "You got a RARE orc chestplate!";
         helmet.innerHTML = "Rare orc helmet.";
+        }
+
+        //Leggings
+        else if (rngNum > 40 && rngNum < 61){
+        x.innerHTML = "You got a RARE orc leggings!";
+        helmet.innerHTML = "Rare orc helmet.";
+        }
+
+        //Boots
+        else if (rngNum > 20 && rngNum < 41){
+        x.innerHTML = "You got a RARE orc boots!";
+        helmet.innerHTML = "Rare orc helmet.";
+        }
+
+        //Weapon
+        else {
+        x.innerHTML = "You got a RARE orc weapon!";
+        helmet.innerHTML = "Rare orc helmet.";
+        }
+        
       }
 
-      else if (x.innerHTML > 140 && x.innerHTML < 145) {
-          x.innerHTML = "You got a RARE orc chestplate!";  
-          chestplate.innerHTML = "Rare orc chestplate.";
-      }
-
-      else if (x.innerHTML > 80 && x.innerHTML < 140){
+      else if (x.innerHTML > 80 && x.innerHTML < 141){
           x.innerHTML = "Nothing happend.";  
       }
   
