@@ -12,11 +12,85 @@
 
 <body>
   <div class="app-wrapper">
+    
   </div>
+  <div class="rngbutton">   
+      <button onclick="randomPicker()">Click it</button>
+      <p id="random">...</p>
+      <p id="yourXP">...</p>
+      <p id="yourGOLD">...</p>
+  </div>
+  
+  <div class="equipment">
+    <h3>Items you have Equipped:</h3>
+    <li id="yourhelmet">...</li>
+    <li id="yourchestplate">...</li>
+    <li id="yourleggings">...</li>
+    <li id="yourboots">...</li>
+    <li id="yourweapon">...</li>
+  </div>
+  
 
-  <div class="box_header">
-        <div class="container"> </div>
-  </div>
+
+  <script>
+
+      var currentxp = 0;
+      var currentgold = 0;
+  
+    function randomPicker() {
+      
+      //Gets what is in the id tags and replaces them with the new phrases
+      var x = document.getElementById("random")
+      var yourxp = document.getElementById("yourXP")
+      var yourgold = document.getElementById("yourGOLD")
+      var helmet = document.getElementById("yourhelmet")
+      var chestplate = document.getElementById("yourchestplate")
+      
+      //Gets random variables
+      x.innerHTML = Math.floor((Math.random() * 150) + 1); //The floor() method rounds down
+      var rngNum = Math.floor((Math.random() * 10) + 1);
+      var rngNum2 = Math.floor((Math.random() * 15) + 10);
+      var rngNum3 = Math.floor((Math.random() * 5) + 1);
+      var rngNum4 = Math.floor((Math.random() * 4) + 1);
+      
+      //The chances of what you will get determinded from the random variables
+      if (x.innerHTML > 144) {
+        x.innerHTML = "You got a RARE orc helmet!";
+        helmet.innerHTML = "Rare orc helmet.";
+      }
+
+      else if (x.innerHTML > 140 && x.innerHTML < 145) {
+          x.innerHTML = "You got a RARE orc chestplate!";  
+          chestplate.innerHTML = "Rare orc chestplate.";
+      }
+
+      else if (x.innerHTML > 80 && x.innerHTML < 140){
+          x.innerHTML = "Nothing happend.";  
+      }
+  
+      else if (x.innerHTML > 40 && x.innerHTML < 80){
+          x.innerHTML = "You gained " + rngNum + " xp.";
+          currentxp += rngNum;
+      }
+  
+      else if (x.innerHTML > 30 && x.innerHTML < 40) {
+          x.innerHTML = "You gained " + rngNum2 + " xp.";
+          currentxp += rngNum;
+      }
+  
+      else {
+          x.innerHTML = "You gain " + rngNum3 + " gold!";
+          currentgold += rngNum3;
+      }
+  
+      yourxp.innerHTML = "You have: " + currentxp + " xp.";
+      yourgold.innerHTML = "You have: " + currentgold + " gold.";
+  
+  }
+  
+  
+  </script>
+
 </body>
 
 </html>
