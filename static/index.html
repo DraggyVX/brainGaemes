@@ -143,14 +143,21 @@
         }
 
         // Weapon
-        else {
+        else 
+
+        var rngNum = Math.floor((Math.random() * 999) + 1);
+
+        if (x.innerHTML > 80 && x.innerHTML < 101) {
         x.innerHTML = "You got a RARE orc weapon!";
         weapon.innerHTML = "Rare orc weapon.";
+        }
         //weapon 
-        if (x.innerHTML > 80 && x.innerHTML < 141) {
+       
+        else if (x.innerHTML > 98.9 && x.innerHTML < 100) {
         x.innerHTML = " congratulation you got a basket of exotic butters ";
         weapon.innerHTML = "basket of exotic butters"
       }
+    }
 
       else if (x.innerHTML > 80 && x.innerHTML < 141) {
           x.innerHTML = "Nothing happend.";  
