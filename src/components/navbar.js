@@ -10,7 +10,17 @@ class Navbar extends Component {
                     <div>lvl: </div>
                     <div id="yourlevel"> 0</div>
                     <a href="#" className="brand">Username</a>
-                    
+
+
+                    <div className="left">
+                        <a href="#" className="link">Inventory</a>
+                        <a href="./Market.html" className="link">Market</a>
+                    </div>
+                    <div className="right">
+                        <a href="#" className="link">Settings</a>
+                    </div>
+
+
                 </div>
         );
     }

@@ -14,23 +14,179 @@
   <div class="app-wrapper">
     
   </div>
-    <div class="rngbutton">   
-        <button onclick="randomPicker()">Click it</button>
-        <p id="random">...</p>
-        <p id="yourXP">...</p>
-        <p id="yourGOLD">...</p>
-        <div id="yourcounter"> </div>
-    </div>
+
+  <div class="rngbutton">   
+      <button onclick="randomPicker()">Click Here!</button>
+      <p id="random">...</p>
+      <p id="yourXP">...</p>
+      <p id="yourGOLD">...</p>
+      <div id="yourcounter"> </div>
+  </div>
+
+  <div class="inv">
+    <h3 class="inv-T">Inventory:</h3>
+    <table class="inv-G">
+        
+        <tr>
+
+            <!-- sorry for the huge table spam, will try to find
+            and elegant solution for table cell spacing-->
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+
+            <!-- sorry for the huge table spam, will try to find
+            and elegant solution for table cell spacing-->
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+
+            <!-- sorry for the huge table spam, will try to find
+            and elegant solution for table cell spacing-->
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
+  </div>
   
-    <div class="equipment">
-        <h3>Items you have Equipped:</h3>
-        <li id="yourhelmet" class="yourrarityH">...</li>
-        <li id="yourchestplate" class="yourrarityC">...</li>
-        <li id="yourleggings" class="yourrarityL">...</li>
-        <li id="yourboots" class="yourrarityB">...</li>
-        <li id="yourweapon" class="yourrarityW">...</li>
-    </div>
+  <div class="equipment">
+    <h3>Items you have Equipped:</h3>
+    <li id="yourhelmet">...</li>
+        <div class="yourhelmet"></div>
+    <li id="yourchestplate">...</li>
+        <div class="yourchestplate"></div>
+    <li id="yourleggings">...</li>
+        <div class="yourleggings"></div>
+    <li id="yourboots">...</li>
+        <div class="yourboots"></div>
+    <li id="yourweapon">...</li>
+        <div class="yourweapon"></div>
+
+        <div class="youroffhand"></div>
+  </div>
   
+  <div class="market">
+        <h3>Market:</h3>
+        <table class="market-G">
+
+            <tr>
+
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+
+            <tr>
+
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            
+            <tr>
+
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            
+            <tr>
+
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            
+        </table>
+</div>
+
+   
   <script>
 
       var counter = 0;
@@ -117,6 +273,7 @@
                     helmetRarity = 1;
                 }
             }
+
 
              else if (rngNum > 500 && rngNum < 601) {
                 x.innerHTML = "Still pumping out blood you ebony helmet is stained eerie black";
@@ -290,6 +447,7 @@
 
                 x.innerHTML = "cangratulation! your becoming batman";
 
+
                 if (leggingsRarity < 4)
                     {
                         leggings.innerHTML = "batman legs";
@@ -321,6 +479,7 @@
                         leggings.innerHTML = "sandwich Leggings";
                         leggingsRarity = 1;
                     }
+
             }
              else {
                 x.innerHTML = "Congratulations? You got a Slaks?";
@@ -331,6 +490,7 @@
                     }
             }
          }
+
 
         //Boots
         else if (rngNum > 20) 
@@ -484,11 +644,22 @@
             }
          }
 
+        if (x.innerHTML > 80 && x.innerHTML < 101) {
+        x.innerHTML = "You got a RARE orc weapon!";
+        weapon.innerHTML = "Rare orc weapon.";
         }
+        //weapon 
+       
+        else if (x.innerHTML > 98.9 && x.innerHTML < 100) {
+        x.innerHTML = " congratulation you got a basket of exotic butters ";
+        weapon.innerHTML = "basket of exotic butters"
+      }
+    }
 
         //What happens when you dont get gear
       else if (realrng > 80 && realrng < 141) {
           x.innerHTML = "Nothing happend."; 
+
       }
 
       else if (realrng > 40 && realrng < 80) {
