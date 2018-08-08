@@ -1,6 +1,11 @@
 @import 'navbar';
 @import 'rngbutton';
 @import 'login';
+@import 'market';
+@import 'equipment';
+
+@import 'inventory';
+
 
 body {
     margin: 0;
@@ -13,18 +18,9 @@ body {
     width: 100vw;
 
     display: grid;
-    grid-template-columns: [navbar-s] 1fr 1fr [navbar-e];
+    grid-template-columns: [navbar-s] 1fr [market-s] 1fr [market-e navbar-e];
     grid-template-rows: [navbar-s] 83px [navbar-e];
 
     overflow: hidden;
 }
 
-.equipment {
-    margin: 0;
-    right: 50px;
-    position: absolute;
-}
-
-.common {
-    
-}

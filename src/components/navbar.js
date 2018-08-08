@@ -13,7 +13,7 @@ class Navbar extends Component {
 
                     <div className="left">
                         <a href="#" className="link">Inventory</a>
-                        <a href="#" className="link">Market</a>
+                        <a href="./Market.html" className="link">Market</a>
                     </div>
                     <div className="right">
                         <a href="#" className="link">Settings</a>
