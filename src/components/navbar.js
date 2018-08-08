@@ -11,6 +11,7 @@ class Navbar extends Component {
                     <div id="yourlevel"> 0</div>
                     <a href="#" className="brand">Username</a>
 
+
                     <div className="left">
                         <a href="#" className="link">Inventory</a>
                         <a href="./Market.html" className="link">Market</a>
@@ -18,6 +19,8 @@ class Navbar extends Component {
                     <div className="right">
                         <a href="#" className="link">Settings</a>
                     </div>
+
+
                 </div>
         );
     }
