@@ -6,6 +6,78 @@
     right: 0;
     position: absolute;
     background-color: $basic-back;
-    width: 25%;
-    height: 200px;
+    width: 25%; //459.5 px at built resolution
+    height: 500px;
+
+    .yourhelmet {
+        background-color: $basic-back;
+        position: absolute;
+        top: 70px;
+        right: 120px;
+
+        height: 75px;
+        width: 85px;
+
+        border: 2px solid black;
+    }
+
+    .yourchestplate {
+        background-color: $basic-back;
+        position: absolute;
+        top: 146px;
+        right: 120px;
+
+        height: 135px;
+        width: 85px;
+
+        border: 2px solid black;
+    }
+
+    .yourleggings {
+        background-color: $basic-back;
+        position: absolute;
+        top: 282px;
+        right: 120px;
+
+        height: 105px;
+        width: 85px;
+
+        border: 2px solid black;
+    }
+
+    .yourboots {
+        background-color: $basic-back;
+        position: absolute;
+        top: 388px;
+        right: 120px;
+
+        height: 60px;
+        width: 85px;
+
+        border: 2px solid black;
+    }
+
+    .yourweapon {
+        background-color: $basic-back;
+        position: absolute;
+        top: 146px;
+        right: 206px;
+
+        height: 135px;
+        width: 55px;
+
+        border: 2px solid black;
+    }
+
+    .youroffhand {
+        background-color: $basic-back;
+        position: absolute;
+        top: 146px;
+        right: 64px;
+
+        height: 135px;
+        width: 55px;
+
+        border: 2px solid black;
+    }
 }
