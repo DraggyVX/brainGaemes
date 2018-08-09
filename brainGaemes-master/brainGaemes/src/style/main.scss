@@ -1,0 +1,30 @@
+@import 'navbar';
+@import 'rngbutton';
+@import 'login';
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: dimgrey;
+}
+
+.home {
+    height: 10vh;
+    width: 100vw;
+
+    display: grid;
+    grid-template-columns: [navbar-s] 1fr 1fr [navbar-e];
+    grid-template-rows: [navbar-s] 83px [navbar-e];
+
+    overflow: hidden;
+}
+
+.equipment {
+    margin: 0;
+    right: 50px;
+    position: absolute;
+}
+
+.common {
+    
+}

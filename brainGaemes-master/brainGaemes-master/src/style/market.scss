@@ -1,0 +1,25 @@
+.market {
+    background-color: $basic-back;
+
+    position: absolute;
+    right: 0px;
+    bottom: 25px;
+
+    height: 28%;
+    width: 25%;
+    padding: 5px;
+}
+
+.market-G {
+    margin-left: 5px;
+
+    td {
+        width: 55px;
+        background-color: $basic-back;   
+        height: 45px;
+        border: 2px solid black;
+        margin-left: 5px;
+        margin-bottom: 5px;
+
+    }
+}

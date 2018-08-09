@@ -1,0 +1,24 @@
+.inv {
+    position: absolute;
+    left: 15.7%;
+    background-color: $basic-back;
+    width: 59%;
+    min-width: 500px;
+    height: 200px;
+    padding: 3px;
+}
+
+.inv-G {
+margin-left: 10px;
+
+    td {
+        width: 50px;
+        background-color: $basic-back;   
+        height: 45px;
+        border: 2px solid black;
+        margin-left: 5px;
+        margin-bottom: 5px;
+
+    }
+
+}

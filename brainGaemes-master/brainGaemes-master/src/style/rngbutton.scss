@@ -1,0 +1,15 @@
+@import 'variables';
+
+.rngbutton {
+    background-color: rgba(211, 211, 211, 0.363);
+    display: grid;
+
+    font-family: 'Monsterrat', cursive;
+    padding: 16px;
+    position: absolute;
+    
+    top: 87px;
+    width: 15%;
+    min-width: 200px;
+    height: 200px;
+}

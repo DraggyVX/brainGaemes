@@ -1,0 +1,92 @@
+//Styles for the navbar
+.navbar {
+    background: grey;
+
+    grid-row: navbar-s/navbar-e;
+    grid-column: navbar-s/navbar-e;
+}
+
+.navbar div {
+    display: none;
+    font-family: 'Black Ops One', cursive;
+}
+
+.navbar .toggle,
+.navbar .brand {
+    display: inline-block;
+}
+
+.navbar .link {
+    display: block;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    background: gold;
+    color: white;
+}
+
+.navbar .link:hover,
+.navbar .link:active {
+    color: black;
+    background: white;
+}
+
+.navbar .brand {
+    width: 10em;
+    text-align: center;
+    padding: 1em;
+    color: white;
+}
+
+.navbar a {
+    text-decoration: none; /* gets rid of the underline */
+}
+
+.navbar .toggle {
+    padding: 1em;
+    color: black;
+}
+
+@media (min-width: 48em) {
+    .navbar {
+        display: flex;
+
+    }
+
+    .navbar div {
+        display: flex;
+    }
+    .navbar .left,
+    .navbar .right {
+        display: flex;
+        flex: 1;
+    }
+
+    .navbar .link {
+        width: auto;
+    }
+
+    .navbar .right {
+        justify-content: flex-end;
+    }
+
+    .navbar .toggle {
+        display: none;
+    }
+}
+
+@media (max-width: 48em) {
+    .navbar.active .toggle {
+        background: darkblue;
+        color: white;
+    }
+
+    .navbar .brand {
+        text-align: left;
+    }
+    
+    .navbar.active div {
+        display: block;
+    }
+
+}
