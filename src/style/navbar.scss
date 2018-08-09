@@ -90,3 +90,9 @@
     }
 
 }
+
+@media screen and (max-height: 523px) {
+    .navbar {
+        display: none;
+    }
+}

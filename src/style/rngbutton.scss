@@ -8,8 +8,32 @@
     padding: 16px;
     position: absolute;
     
-    top: 87px;
+    top: 5em;
     width: 15%;
-    min-width: 200px;
     height: 200px;
+}
+
+@media screen and (max-height: 5em) {
+    .rngbutton {
+        top: 0px;
+    }
+}
+
+@media screen and (max-width: 48em) {
+    .rngbutton {
+        width: 40%;
+    
+    }
+}
+
+@media screen and (max-width: 34em) {
+    .rngbutton {
+        width: 100%;
+    }
+}
+
+@media screen and (max-height: 523px) {
+    .rngbutton {
+        top: 0;
+    }
 }

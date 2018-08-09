@@ -5,6 +5,11 @@
 @import 'equipment';
 @import 'inventory';
 
+@import 'Test';
+
+
+//total height of view screen: (on 
+//resolution built ) 842.2
 
 body {
     margin: 0;
@@ -13,12 +18,12 @@ body {
 }
 
 .home {
-    height: 10vh;
+    max-height: 80px;
     width: 100vw;
 
     display: grid;
     grid-template-columns: [navbar-s] 1fr [market-s] 1fr [market-e navbar-e];
-    grid-template-rows: [navbar-s] 83px [navbar-e];
+    grid-template-rows: [navbar-s] 15vh [navbar-e];
 
     overflow: hidden;
 }

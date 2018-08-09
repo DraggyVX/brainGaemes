@@ -1,16 +1,25 @@
-
-.inv {
-    position: absolute;
-    left: 15.7%;
-    background-color: $basic-back;
-    width: 59%;
-    min-width: 500px;
-    height: 200px;
-    padding: 3px;
+@media screen and (max-width: 48em) {
+    .inv {
+        display:none;
+    }
 }
 
-.inv-G {
-margin-left: 10px;
+
+@media screen and (min-width: 48em) {
+    .inv {
+        color: black;
+        position: absolute;
+        left: 15%;
+        background-color: $basic-back;
+        width: 59%;
+   
+        height: 200px;
+        padding: 3px;
+        margin-left: 3px;
+    }
+
+    .inv-G {
+        margin-left: 10px;
 
     td {
         width: 50px;
@@ -20,6 +29,12 @@ margin-left: 10px;
         margin-left: 5px;
         margin-bottom: 5px;
 
+        }
     }
+}
 
+@media screen and (max-height: 523px) {
+    .inv {
+        top: 0;
+    }
 }

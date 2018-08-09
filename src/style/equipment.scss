@@ -2,21 +2,22 @@
 
 .equipment {
     padding: 16px;
-    margin: 0;
     right: 0;
     position: absolute;
     background-color: $basic-back;
     width: 25%; //459.5 px at built resolution
-    height: 500px;
+    max-width: 400px;
+    height: 60%;
 
     .yourhelmet {
         background-color: $basic-back;
         position: absolute;
-        top: 70px;
-        right: 120px;
+        top: 15.55%;
+        right: 32%;
 
-        height: 75px;
-        width: 85px;
+        height: 16.6%;
+        width: 22.6%;
+        max-width: 75px;
 
         border: 2px solid black;
     }
@@ -24,11 +25,12 @@
     .yourchestplate {
         background-color: $basic-back;
         position: absolute;
-        top: 146px;
-        right: 120px;
+        top: 32.44%;
+        right: 32%;
 
-        height: 135px;
-        width: 85px;
+        height: 30%;
+        width: 22.6%;
+        max-width: 75px;
 
         border: 2px solid black;
     }
@@ -36,11 +38,12 @@
     .yourleggings {
         background-color: $basic-back;
         position: absolute;
-        top: 282px;
-        right: 120px;
+        top: 62.66%;
+        right: 32%;
 
-        height: 105px;
-        width: 85px;
+        height: 23.3%;
+        width: 22.6%;
+        max-width: 75px;
 
         border: 2px solid black;
     }
@@ -48,11 +51,12 @@
     .yourboots {
         background-color: $basic-back;
         position: absolute;
-        top: 388px;
-        right: 120px;
+        top: 86.22%;
+        right: 32%;
 
-        height: 60px;
-        width: 85px;
+        height: 13.3%;
+        width: 22.6%;
+        max-width: 75px;
 
         border: 2px solid black;
     }
@@ -60,11 +64,12 @@
     .yourweapon {
         background-color: $basic-back;
         position: absolute;
-        top: 146px;
-        right: 206px;
+        top: 32.44%;
+        right: 54.93%;
 
-        height: 135px;
-        width: 55px;
+        height: 30%;
+        width: 14.6%;
+        max-width: 50px;
 
         border: 2px solid black;
     }
@@ -72,12 +77,39 @@
     .youroffhand {
         background-color: $basic-back;
         position: absolute;
-        top: 146px;
-        right: 64px;
+        top: 32.4%;
+        right: 17.06%;
 
-        height: 135px;
-        width: 55px;
+        height: 30%;
+        width: 14.6%;
+        max-width: 50px;
 
         border: 2px solid black;
+    }
+}
+
+@media screen and (max-width: 34em) {
+    .equipment {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 48em) {
+    .equipment {
+        width: 85%;
+        max-width: 20em;
+        min-width: 200px;
+    }
+}
+
+@media screen and (max-height: 523px) {
+    .equipment {
+        top: 0;
+    }
+}
+
+@media screen and (max-height: 459px) {
+    .equipment {
+        display: none;
     }
 }
